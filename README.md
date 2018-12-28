@@ -13,7 +13,7 @@ docker run -v /my/projecty/cypress:/cypress rdelafuente/cypress
 
 ## Pin a version
 
-There is a CircleCI automated job that pulls the latest Cypress, tags it, and pushes it.
+There is a CircleCI hourly build that pulls the latest Cypress, tags it, and pushes it.
 
 You will find Cypress 3.1.3, for example, in rdelafuente/cypress-runner:3.1.3
 You will also find any new Cypress versions published at most 1 hour after they reach the yarn repos.
