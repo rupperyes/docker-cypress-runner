@@ -15,11 +15,11 @@ There is a CircleCI hourly build that pulls the latest Cypress, tags it, and pus
 
 ## Use with a specific Cypress version
 
-You will find Cypress 3.1.3, for example, in rdelafuente/cypress-runner:3.1.3
+You will find Cypress 3.1.3, for example, in rdelafuente/cypress:3.1.3
 
 You will also find any new Cypress versions published at most 1 hour after they reach the yarn repos.
 
-In the unlikely case you don't want to pin down a Cypress version, you can just use rdelafuente/cypress-runner:latest for... well, for the latest Cypress.
+In the unlikely case you don't want to pin down a Cypress version, you can just use rdelafuente/cypress:latest for... well, for the latest Cypress.
 
 ## Why does this exist
 
