@@ -1,4 +1,4 @@
-Build: [![CircleCI](https://circleci.com/gh/rupperyes/docker-cypress-runner.svg?style=svg)](https://circleci.com/gh/rupperyes/docker-cypress-runner)
+[![CircleCI](https://circleci.com/gh/rupperyes/docker-cypress-runner.svg?style=svg)](https://circleci.com/gh/rupperyes/docker-cypress-runner)
 
 # Docker Cypress Runner
 
