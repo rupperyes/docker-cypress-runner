@@ -20,3 +20,11 @@ jobs:
           mv /tmp/docker/* /usr/bin
     - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
     - run: ./build.sh
+workflows:
+  version: 2
+  hourly:
+    triggers:
+    - schedule:
+        cron: "0 * * * *"
+    jobs:
+    - build
