@@ -9,7 +9,7 @@ See it in Docker hub: https://cloud.docker.com/repository/docker/rdelafuente/cyp
 
 
 ## How to use
-docker run -v /my/projecty/cypress:/cypress rdelafuente/cypress
+> docker run -v /my/project/cypress:/cypress rdelafuente/cypress
 
 ## Pin a version
 
