@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -xe
-VERSION=${VERSION:-$(yarn info cypress version --json | jq -r .data)}
+VERSION=${VERSION:-$(yarn info cypress version | tail -n2 | head -n1)}
 docker pull rdelafuente/cypress:${VERSION} || echo "building from scratch"
 
 docker build . -t rdelafuente/cypress:${VERSION} --build-arg VERSION=${VERSION}
