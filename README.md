@@ -1,3 +1,5 @@
+Build: [![CircleCI](https://circleci.com/gh/rupperyes/docker-cypress-runner.svg?style=svg)](https://circleci.com/gh/rupperyes/docker-cypress-runner)
+
 # Docker Cypress Runner
 
 A docker image with Cypress installed, ready for your E2E needs.
