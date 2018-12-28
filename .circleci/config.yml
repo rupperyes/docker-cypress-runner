@@ -8,6 +8,4 @@ jobs:
 
     steps:
     - checkout
-    - run:
-      name: Build and push
-      command: ./build.sh
+    - run: ./build.sh
