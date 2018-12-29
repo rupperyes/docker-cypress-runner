@@ -3,4 +3,5 @@ WORKDIR /workdir
 ARG     VERSION
 RUN     yarn add cypress@${VERSION}
 RUN     npx cypress verify
-CMD     ["npx", "cypress"]
+WORKDIR /cypress
+CMD     ["/workdir/node_modules/.bin/cypress", "run"]
