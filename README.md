@@ -3,7 +3,7 @@
 # Docker Cypress Runner
 
 A docker image with Cypress installed, ready for your E2E needs.
-It's based on cypress/browsers:latest, which should include the latest Chrome.
+It's based on cypress/browsers:latest, which includes the latest Chrome.
 
 See it in Docker hub: https://cloud.docker.com/repository/docker/rdelafuente/cypress
 
@@ -11,7 +11,18 @@ There is a CircleCI hourly build that pulls the latest Cypress, tags it, and pus
 
 ## How to use
 
-> docker run -v /my/project/cypress:/cypress rdelafuente/cypress
+### Use directly
+
+```bash
+docker run -v /my/project:/cypress rdelafuente/cypress
+```
+
+### Or build your own image:
+
+```dockerfile
+FROM    rdelafuente/cypress:3.1.3
+ADD     cypress cypress.json /cypress/
+```
 
 ## Use with a specific Cypress version
 
@@ -30,11 +41,10 @@ and unzipping, with all the time waste and flakiness that comes with it.
 This image is currently saving us around 1 minute per build. 
 This number will vary based on the specs of your CI machines.
 
-## If you're missing a Cypress version
+## If you're missing an old Cypress version
 
-Sorry about that. I haven't manually gone back in time and created all the past versions.
-Message me or create an issue here and I'll run this manually with the missing version.
-Or pull request a script that runs for all the past versions.
+I haven't included anything before 2.0.0.
+Message me or create an issue here and I'll run the script manually with the missing version.
 
 ## If you find a bug
 
