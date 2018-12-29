@@ -1,7 +1,11 @@
 FROM    cypress/browsers:latest
+
+ENV     PATH="/cypress/node_modules/.bin:${PATH}"
 WORKDIR /workdir
-ARG     VERSION
-RUN     yarn add cypress@${VERSION}
-RUN     npx cypress verify
-WORKDIR /cypress
-CMD     ["/workdir/node_modules/.bin/cypress", "run"]
+CMD     ["/cypress/node_modules/.bin/cypress", "run"]
+
+ARG     VERSION=latest
+
+RUN     mkdir /cypress && \
+        yarn --cwd /cypress add cypress@${VERSION} && \
+        /cypress/node_modules/.bin/cypress verify
