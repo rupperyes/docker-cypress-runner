@@ -10,5 +10,4 @@ build() {
     docker push rdelafuente/cypress:latest
 }
 
-#docker pull rdelafuente/cypress:${VERSION} || build
-build
+docker pull rdelafuente/cypress:${VERSION} || build

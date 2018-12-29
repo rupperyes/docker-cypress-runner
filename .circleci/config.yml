@@ -19,4 +19,16 @@ jobs:
           tar -xz -C /tmp -f /tmp/docker-$VER.tgz
           mv /tmp/docker/* /usr/bin
     - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-    - run: ./build_range.sh
+    - run: ./build.sh
+workflows:
+  version: 2
+  hourly:
+    triggers:
+    - schedule:
+        cron: "0 * * * *"
+        filters:
+          branches:
+            only:
+              - master
+    jobs:
+    - build
