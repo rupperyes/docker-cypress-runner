@@ -24,6 +24,11 @@ FROM    rdelafuente/cypress:3.1.3
 ADD     cypress cypress.json /cypress/
 ```
 
+### Run your own command:
+```bash
+docker run rdelafuente/cypress cypress run --spec ... --reporter ...
+```
+
 ## Use with a specific Cypress version
 
 You will find Cypress 3.1.3, for example, in rdelafuente/cypress:3.1.3
