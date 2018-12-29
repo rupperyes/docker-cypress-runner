@@ -14,14 +14,14 @@ There is a CircleCI hourly build that pulls the latest Cypress, tags it, and pus
 ### Use directly
 
 ```bash
-docker run -v /my/project:/cypress rdelafuente/cypress
+docker run -v /my/project:/workdir rdelafuente/cypress
 ```
 
 ### Or build your own image:
 
 ```dockerfile
 FROM    rdelafuente/cypress:3.1.3
-ADD     cypress cypress.json /cypress/
+ADD     cypress cypress.json /workdir/
 ```
 
 ### Run your own command:
